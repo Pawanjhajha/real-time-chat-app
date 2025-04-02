@@ -9,6 +9,6 @@ import authRouter from './routers/authRouter'
 //enable the json data.json data convert into js object and pass the router
 app.use(express.json())
 
-//register router
+//register router 
 app.use('/api/v1/auth',authRouter)
 export default app;
