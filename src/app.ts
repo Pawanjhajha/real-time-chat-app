@@ -1,7 +1,8 @@
 import express from 'express';
 const app=express();
 //now entry point is not the app.ts
-import authRouter from './routers/authRouter'
+import authRouter from './routers/authRouter';
+import userRouter from './routers/userRouter';
 
 // app.listen(5000,()=>{
 //     console.log(`server is running on port:5000`);
@@ -11,4 +12,5 @@ app.use(express.json())
 
 //register router 
 app.use('/api/v1/auth',authRouter)
+app.use('/api/v1/user',userRouter)
 export default app;
