@@ -62,7 +62,9 @@ export const login = async (req: Request, res: Response, next: NextFunction): Pr
         res.status(200).json(<ApiResponse>{
             message: 'User logged in successfully',
             success: true,
-            token: token,
+            data: {
+                token:token
+            }
         });
     } catch (e) {
         res.status(500).json(<ApiResponse>{
